@@ -33,3 +33,8 @@ jobs:
 
     - name: Build
       run: cargo build --all --locked --verbose
+      
+    - uses: actions/upload-artifact@v2
+      with:
+        name: compiled-binary
+        path: target/release/monolith
